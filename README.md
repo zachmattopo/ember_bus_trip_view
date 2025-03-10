@@ -20,46 +20,51 @@ https://github.com/user-attachments/assets/d3381bba-9342-4536-9934-808e771193cb
 
 ```
 ember_bus_trip_view/
-├── assets/                    # Static assets
-│   ├── fonts/                 # Font files
-│   └── icons/                 # Icon assets
+├── assets/                        # Static assets
+│   ├── fonts/                     # Font files
+│   └── icons/                     # Icon assets
 ├── lib/
-│   ├── core/                  # Core functionality
-│   │   └── app_config.dart    # App-wide configuration aka API key for Google Maps (not committed to version control)
-│   ├── cubits/                # State management using Cubits
+│   ├── core/                      # Core functionality
+│   │   └── app_config.dart        # App-wide configuration aka API key for Google Maps (not committed to version control)
+│   ├── cubits/                    # State management using Cubits
 │   │   ├── trip_info_cubit/
-│   │   └── trip_list_cubit/
-│   ├── models/                # Data models
+│   │   ├── trip_list_cubit/
+│   │   └── simple_bloc_observer.dart
+│   ├── models/                    # Data models
+│   │   ├── api_response.dart
 │   │   ├── trip.dart
 │   │   ├── trip_info.dart
 │   │   └── stop_info.dart
-│   ├── services/              # API and services
+│   ├── services/                  # API and services
 │   │   ├── repository.dart
 │   │   └── dio_client.dart
-│   ├── utils/                 # Utility functions
+│   ├── utils/                     # Utility functions
 │   │   └── app_utils.dart
-│   ├── views/                 # UI components
+│   ├── views/                     # UI components
 │   │   ├── widgets/
+│   │   │   ├── dots_loading_indicator.dart
+│   │   │   ├── open_container_wrapper.dart
+│   │   │   └── trip_list_tile.dart
+│   │   ├── stop_info_list_page.dart
 │   │   ├── trip_info_page.dart
 │   │   └── trip_list_page.dart
-│   └── main.dart              # App entry point
-├── test/                      # Test files
-│   ├── cubits/                # Cubit tests
-│   ├── models/                # Model tests
-│   ├── mock/                  # Mock test data
-│   └── widget_test.dart
-├── pubspec.yaml               # Dependencies
-└── README.md                  # Project documentation
+│   └── main.dart                  # App entry point
+├── test/                          # Test files
+│   ├── cubits/                    # Cubit tests
+│   ├── models/                    # Model tests
+│   └── mock/                      # Mock test data
+├── pubspec.yaml                   # Dependencies
+└── README.md                      # Project documentation
 ```
 
 ## Architecture
 
 This project follows a simpler form of CLEAN architecture pattern with:
 
-Data Models for entity representation.
-Repository pattern for data access.
-Cubit pattern for state management.
-Separation of UI and business logic.
+- Data Models for entity representation.
+- Repository pattern for data access.
+- Cubit pattern for state management.
+- Separation of UI and business logic.
 
 ## Mind map
 
