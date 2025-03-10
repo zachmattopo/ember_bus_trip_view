@@ -16,6 +16,15 @@ https://github.com/user-attachments/assets/4eefa937-16ea-4398-a24a-39049e382915
 
 https://github.com/user-attachments/assets/d3381bba-9342-4536-9934-808e771193cb
 
+## Architecture
+
+This project follows a simpler form of CLEAN architecture pattern with:
+
+- Data Models for entity representation.
+- Repository pattern for data access.
+- Cubit pattern for state management.
+- Separation of UI and business logic.
+
 ## App folder structure
 
 ```
@@ -56,15 +65,6 @@ ember_bus_trip_view/
 ├── pubspec.yaml                   # Dependencies
 └── README.md                      # Project documentation
 ```
-
-## Architecture
-
-This project follows a simpler form of CLEAN architecture pattern with:
-
-- Data Models for entity representation.
-- Repository pattern for data access.
-- Cubit pattern for state management.
-- Separation of UI and business logic.
 
 ## Mind map
 
